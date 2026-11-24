@@ -1,0 +1,1793 @@
+﻿-- create database
+
+
+CREATE DATABASE database_project;
+
+
+
+
+________________
+
+
+-- create admins table 
+
+
+CREATE TABLE admins ( 
+admin_id INT AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(50) UNIQUE NOT NULL, 
+full_name VARCHAR(100) NOT NULL, 
+email VARCHAR(100) UNIQUE NOT NULL 
+) ENGINE=InnoDB;
+
+
+
+
+INSERT INTO admins 
+(username, full_name, email) 
+VALUES 
+('admin', 'Administrator', 'admin@examsystem.com');
+________________
+-- create students table 
+
+
+CREATE TABLE students ( 
+student_id INT PRIMARY KEY, 
+student_name VARCHAR(100) NOT NULL, 
+email VARCHAR(100) UNIQUE NOT NULL, 
+department VARCHAR(50) NOT NULL, 
+intake_section VARCHAR(10) NOT NULL, 
+semester VARCHAR(20) NOT NULL 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into students 
+
+
+INSERT INTO students 
+(student_id, student_name, email, department, intake_section, semester)
+VALUES
+-- Intake 55, Section 1, 5th Semester
+(55101, 'Luckman Rafique', '55101@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55102, 'Shah Rokan', '55102@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55103, 'Taimur Rahman', '55103@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55104, 'Samiul Islam', '55104@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55105, 'Most. Zannatul', '55105@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55106, 'Md. Jahid Hasan', '55106@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55107, 'Sayem All Imam', '55107@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55108, 'Simran Bintae', '55108@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55109, 'Asma Anwar', '55109@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55110, 'Halima Tus Sadia', '55110@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55111, 'Debjani Debi', '55111@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55112, 'Fahim Montasir', '55112@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55113, 'Md Showkotul', '55113@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55114, 'MD. Yousuf Ali', '55114@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55115, 'Shimul Islam', '55115@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55116, 'Md. Rafi Imam', '55116@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55117, 'Sadia Afrin Kona', '55117@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55118, 'Sadika Tabassum', '55118@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55119, 'Sabrina Sultana', '55119@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+(55120, 'Marzia Islam', '55120@cse.bubt.edu.bd', 'CSE', '55-1', '5th Semester'),
+-- Intake 55, Section 2, 5th Semester
+(55121, 'Safa Akter', '55121@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55122, 'MD. Adnan Sami', '55122@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55123, 'Md.Siam Khan', '55123@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55124, 'Fahim Islam', '55124@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55125, 'Tanber Hasan', '55125@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55126, 'Kazi Yeaj Morshed', '55126@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55127, 'Refat Tasnim', '55127@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55128, 'Sirajum Munira', '55128@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55129, 'Nusrat Jahan', '55129@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55130, 'Babnus Fardah', '55130@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55131, 'Tanvir Ahmed', '55131@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55132, 'Maria Akter', '55132@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55133, 'Md. Faria Mia', '55133@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55134, 'Md Shadib Hossain', '55134@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55135, 'Bobita Akter', '55135@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55136, 'Syeda Naima Nabi', '55136@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55137, 'Sonchita Pramanik', '55137@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55138, 'Hamim Islam', '55138@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55139, 'Ononna Ray', '55139@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+(55140, 'Jannatul Fardushi', '55140@cse.bubt.edu.bd', 'CSE', '55-2', '5th Semester'),
+-- Intake 56, Section 1, 4th Semester
+(56101, 'Taky Anwar Shad', '56101@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56102, 'Nadimul Islam', '56102@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56103, 'Musfiq Hasan', '56103@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56104, 'Muntasa Shafiqa', '56104@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56105, 'Abdullah Mahmud', '56105@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56106, 'Md Shourob Ali', '56106@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56107, 'Tahmid Shahid', '56107@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56108, 'Mst.Mitanur Akter', '56108@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56109, 'Abdullah Kawser', '56109@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56110, 'Hasnain (Mahir)', '56110@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56111, 'Khairun Minha', '56111@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56112, 'Md.Rafsan', '56112@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56113, 'Maria Sultana', '56113@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56114, 'Tanveer Hossain', '56114@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56115, 'Md. Mahimur', '56115@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56116, 'Priya Bhowmick', '56116@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56117, 'Abul Hasnat Aky', '56117@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56118, 'MD Tanvir Ahmmed', '56118@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56119, 'SM Kawser Nahin', '56119@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+(56120, 'Oalid Khan', '56120@cse.bubt.edu.bd', 'CSE', '56-1', '4th Semester'),
+-- Intake 56, Section 2, 4th Semester
+(56121, 'Sadia Afrin Khan', '56121@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56122, 'Md. Zunayed', '56122@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56123, 'MD A R Rahman Mahin', '56123@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56124, 'Nahid Hassan', '56124@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56125, 'Maroful Islam', '56125@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56126, 'Mustafijul Islam Emon', '56126@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56127, 'Muhammad Amir Hamza Khan', '56127@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56128, 'S M Nafizul Islam', '56128@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56129, 'Mahmudul Hasan', '56129@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56130, 'Tanvir Ahmed Sifa', '56130@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56131, 'Susma Ahmed', '56131@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56132, 'Fazla Rabbi', '56132@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56133, 'Md. Rasedul Islam', '56133@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56134, 'Md Moshiur Rahman', '56134@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56135, 'Md.Jony Islam', '56135@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56136, 'Maruf Billah Anas', '56136@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56137, 'Tushar Mia', '56137@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56138, 'Md Rahad', '56138@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56139, 'Al-Amin Oyon', '56139@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester'),
+(56140, 'Abdullah al kawser', '56140@cse.bubt.edu.bd', 'CSE', '56-2', '4th Semester');
+
+
+-- check students data 
+
+
+SELECT * FROM students 
+ORDER BY student_id ASC;
+-- create courses table 
+
+
+CREATE TABLE courses ( 
+course_id INT AUTO_INCREMENT PRIMARY KEY, 
+course_code VARCHAR(20) UNIQUE NOT NULL, 
+course_name VARCHAR(100) NOT NULL, 
+credit DECIMAL(3,1) NOT NULL, 
+department VARCHAR(50) NOT NULL 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into courses 
+
+
+INSERT INTO courses 
+(course_code, course_name, credit, department) 
+VALUES 
+('CSE 207', 'Database System', 3.0, 'CSE'), 
+('CSE 341', 'Advanced Programming', 3.0, 'CSE'), 
+('CSE 209', 'Operating System', 3.0, 'CSE'), 
+('CSE 221', 'Data Structure', 3.0, 'CSE'), 
+('CSE 205', 'Digital Logic Design', 3.0, 'CSE'), 
+('CSE 231', 'Algorithms', 3.0, 'CSE');
+
+
+
+
+-- check courses data
+
+
+SELECT * 
+FROM courses
+ORDER BY course_id ASC;
+________________
+-- create enrollments table 
+
+
+CREATE TABLE enrollments ( 
+enrollment_id INT AUTO_INCREMENT PRIMARY KEY, 
+student_id INT NOT NULL, 
+course_id INT NOT NULL, 
+semester VARCHAR(20) NOT NULL, 
+
+
+UNIQUE (student_id, course_id, semester), 
+
+
+FOREIGN KEY (student_id) REFERENCES students(student_id), 
+FOREIGN KEY (course_id) REFERENCES courses(course_id) 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into enrollments 
+
+
+INSERT INTO enrollments 
+(student_id, course_id, semester) 
+SELECT 
+s.student_id, 
+c.course_id, 
+s.semester 
+FROM students s 
+JOIN courses c ON ( 
+(s.intake_section IN ('55-1', '55-2') 
+         AND c.course_code IN ('CSE 207', 'CSE 341', 'CSE 209')) 
+OR (s.intake_section IN ('56-1', '56-2') 
+         AND c.course_code IN ('CSE 221', 'CSE 205', 'CSE 231')) 
+) 
+ORDER BY s.student_id ASC, c.course_id ASC;
+
+
+-- check enrollments data 
+
+
+SELECT * 
+FROM enrollments;
+
+
+
+
+-- check enrolled courses 
+SELECT 
+s.student_id, 
+s.student_name, 
+s.intake_section, 
+c.course_code, 
+c.course_name, 
+e.semester 
+FROM enrollments e 
+JOIN students s ON e.student_id = s.student_id 
+JOIN courses c ON e.course_id = c.course_id 
+ORDER BY s.student_id ASC, c.course_code ASC;
+________________
+-- create rooms table 
+
+
+CREATE TABLE rooms ( 
+room_id INT AUTO_INCREMENT PRIMARY KEY, 
+building VARCHAR(30) NOT NULL,
+room_number VARCHAR(20) NOT NULL, 
+capacity INT NOT NULL, 
+
+
+UNIQUE (room_number, building), 
+CHECK (capacity > 0) 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into rooms 
+
+
+INSERT INTO rooms 
+(building, room_number, capacity) 
+VALUES 
+('A', '301', 40), 
+('A', '302', 40), 
+('A', '303', 35), 
+('B', '401', 50), 
+('B', '402', 50);
+
+
+
+
+-- check rooms data 
+
+
+SELECT * 
+FROM rooms
+ORDER BY room_id ASC;
+________________
+-- create invigilators table 
+
+
+CREATE TABLE invigilators ( 
+invigilator_id INT AUTO_INCREMENT PRIMARY KEY, 
+invigilator_code VARCHAR(10) UNIQUE NOT NULL, 
+invigilator_name VARCHAR(100) NOT NULL, 
+email VARCHAR(100) UNIQUE NOT NULL, 
+department VARCHAR(50) NOT NULL 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into invigilators 
+
+
+INSERT INTO invigilators 
+(invigilator_code, invigilator_name, email, department) 
+VALUES 
+('MDSHA', 'Md. Shakil Ahmed', 'mdsha@bubt.edu.bd', 'CSE'), 
+('IN', 'Itisha Nowrin', 'in@bubt.edu.bd', 'CSE'), 
+('MANQ', 'M. A. Nur Quraishi', 'manq@bubt.edu.bd', 'CSE'), 
+('HMF', 'Humayra Ferdous', 'hmf@bubt.edu.bd', 'CSE'), 
+('MHB', 'Mahbuba Habiba', 'mhb@bubt.edu.bd', 'CSE'), 
+('BJM', 'Bijon Mallik', 'bjm@bubt.edu.bd', 'CSE');
+
+
+
+
+-- check invigilators data 
+
+
+SELECT * 
+FROM invigilators
+ORDER BY invigilator_id ASC ;
+________________
+-- create security questions table
+
+
+CREATE TABLE security_questions (
+    question_id INT AUTO_INCREMENT PRIMARY KEY,
+    question_text VARCHAR(255) NOT NULL UNIQUE
+) ENGINE=InnoDB;
+
+
+-- insert security questions
+
+
+INSERT INTO security_questions (question_text)
+VALUES
+('What was the name of your first school?'),
+('What is the name of your childhood best friend?'),
+('What is your favorite childhood memory?'),
+('What was your childhood nickname?'),
+('What is the name of your favorite teacher?'),
+('What is your favorite book?');
+________________
+-- create admin login table 
+
+
+CREATE TABLE admin_logins ( 
+admin_id INT NOT NULL PRIMARY KEY, 
+password_hash VARCHAR(255) NOT NULL, 
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+security_question_id INT NOT NULL DEFAULT 1,
+security_answer_hash VARCHAR(255) NOT NULL DEFAULT '',
+reset_attempts INT UNSIGNED NOT NULL DEFAULT 0,
+reset_locked_until DATETIME DEFAULT NULL,
+
+
+FOREIGN KEY (admin_id) REFERENCES admins(admin_id) 
+ON DELETE CASCADE 
+ON UPDATE CASCADE 
+) ENGINE=InnoDB;
+________________
+-- Create Student Login Table
+
+
+CREATE TABLE student_logins (
+    student_id INT PRIMARY KEY,
+    password_hash VARCHAR(255) NOT NULL,
+    security_question_id INT NOT NULL,
+    security_answer_hash VARCHAR(255) NOT NULL,
+    reset_attempts INT UNSIGNED NOT NULL DEFAULT 0,
+    reset_locked_until DATETIME DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+
+    CONSTRAINT fk_student_login
+    FOREIGN KEY (student_id)
+    REFERENCES students(student_id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+
+
+    CONSTRAINT fk_student_security_question
+    FOREIGN KEY (security_question_id)
+    REFERENCES security_questions(question_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+
+
+) ENGINE=InnoDB;
+
+
+
+
+________________
+
+
+-- Create invigilator Login Table
+
+
+CREATE TABLE invigilator_logins (
+    invigilator_code VARCHAR(10) PRIMARY KEY,
+    password_hash VARCHAR(255) NOT NULL,
+    security_question_id INT NOT NULL,
+    security_answer_hash VARCHAR(255) NOT NULL,
+    reset_attempts INT UNSIGNED NOT NULL DEFAULT 0,
+    reset_locked_until DATETIME DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+
+    CONSTRAINT fk_invigilator_login
+    FOREIGN KEY (invigilator_code)
+    REFERENCES invigilators(invigilator_code)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+
+
+    CONSTRAINT fk_invigilator_security_question
+    FOREIGN KEY (security_question_id)
+    REFERENCES security_questions(question_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+
+
+) ENGINE=InnoDB;
+________________
+
+
+-- create exams table 
+
+
+CREATE TABLE exams ( 
+exam_id INT AUTO_INCREMENT PRIMARY KEY, 
+course_id INT NOT NULL, 
+exam_type VARCHAR(50) NOT NULL, 
+academic_year VARCHAR(20) NOT NULL, 
+semester VARCHAR(20) NOT NULL, 
+
+
+FOREIGN KEY (course_id) REFERENCES courses(course_id) 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into exams 
+
+
+INSERT INTO exams 
+(course_id, exam_type, academic_year, semester) 
+SELECT 
+course_id, 
+'Final Exam', 
+'2026', 
+
+
+CASE
+    WHEN course_code IN ('CSE 207', 'CSE 341', 'CSE 209')
+        THEN '5th Semester'
+    WHEN course_code IN ('CSE 221', 'CSE 205', 'CSE 231')
+        THEN '4th Semester'
+END
+ 
+FROM courses 
+ORDER BY course_id ASC;
+
+
+
+
+-- check exams data 
+
+
+SELECT 
+e.exam_id, 
+c.course_code, 
+c.course_name, 
+e.exam_type, 
+e.academic_year, 
+e.semester 
+FROM exams e 
+JOIN courses c ON e.course_id = c.course_id 
+ORDER BY e.exam_id ASC;
+________________
+-- create exam schedules table 
+
+
+CREATE TABLE exam_schedules ( 
+schedule_id INT AUTO_INCREMENT PRIMARY KEY, 
+exam_id INT NOT NULL UNIQUE, 
+exam_date DATE NOT NULL, 
+start_time TIME NOT NULL, 
+end_time TIME NOT NULL, 
+
+
+FOREIGN KEY (exam_id) REFERENCES exams(exam_id), 
+CHECK (end_time > start_time) 
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into exam schedules 
+
+
+INSERT INTO exam_schedules 
+(exam_id, exam_date, start_time, end_time) 
+SELECT 
+e.exam_id, 
+CASE c.course_code 
+         WHEN 'CSE 207' THEN '2026-12-01' 
+         WHEN 'CSE 221' THEN '2026-12-01' 
+         WHEN 'CSE 341' THEN '2026-12-03' 
+         WHEN 'CSE 205' THEN '2026-12-03' 
+         WHEN 'CSE 209' THEN '2026-12-05' 
+         WHEN 'CSE 231' THEN '2026-12-05' 
+END, 
+
+
+CASE c.course_code 
+         WHEN 'CSE 207' THEN '10:00:00' 
+         WHEN 'CSE 221' THEN '14:00:00' 
+         WHEN 'CSE 341' THEN '10:00:00' 
+         WHEN 'CSE 205' THEN '14:00:00' 
+         WHEN 'CSE 209' THEN '10:00:00' 
+         WHEN 'CSE 231' THEN '14:00:00' 
+END, 
+
+
+CASE c.course_code 
+         WHEN 'CSE 207' THEN '12:00:00' 
+         WHEN 'CSE 221' THEN '16:00:00' 
+         WHEN 'CSE 341' THEN '12:00:00' 
+         WHEN 'CSE 205' THEN '16:00:00' 
+         WHEN 'CSE 209' THEN '12:00:00' 
+         WHEN 'CSE 231' THEN '16:00:00' 
+END 
+FROM exams e 
+JOIN courses c ON e.course_id = c.course_id
+ORDER BY e.exam_id ASC;
+________________
+
+
+-- check exam schedules data 
+
+
+SELECT 
+es.schedule_id, 
+c.course_code, 
+e.semester, 
+es.exam_date, 
+es.start_time, 
+es.end_time 
+FROM exam_schedules es 
+JOIN exams e ON es.exam_id = e.exam_id 
+JOIN courses c ON e.course_id = c.course_id 
+ORDER BY es.exam_date, es.start_time;
+________________
+-- create exam room allocations table 
+
+
+CREATE TABLE exam_room_allocations (
+    allocation_id INT AUTO_INCREMENT PRIMARY KEY,
+    schedule_id INT NOT NULL,
+    room_id INT NOT NULL,
+    intake_section VARCHAR(10) NOT NULL,
+    allocated_seats INT NOT NULL,
+    UNIQUE (schedule_id, room_id, intake_section),
+    FOREIGN KEY (schedule_id)
+        REFERENCES exam_schedules(schedule_id),
+
+
+    FOREIGN KEY (room_id)
+        REFERENCES rooms(room_id),
+
+
+    CHECK (allocated_seats > 0)
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into exam room allocations 
+
+
+-- Insert dynamic room allocations
+
+
+INSERT INTO exam_room_allocations
+(schedule_id, room_id, intake_section, allocated_seats)
+
+
+SELECT
+    es.schedule_id,
+    r.room_id,
+    x.intake_section,
+    COUNT(DISTINCT s.student_id) AS total_students
+
+
+FROM (
+    -- CSE 207 (55 Intake)
+    SELECT 'CSE 207' AS course_code, '55-1' AS intake_section, '301' AS room_number, 'A' AS building
+    UNION ALL SELECT 'CSE 207', '55-2', '302', 'A'
+
+
+    -- CSE 341 (55 Intake)
+    UNION ALL SELECT 'CSE 341', '55-1', '401', 'B'
+    UNION ALL SELECT 'CSE 341', '55-2', '402', 'B'
+
+
+    -- CSE 209 (55 Intake)
+    UNION ALL SELECT 'CSE 209', '55-1', '302', 'A'
+    UNION ALL SELECT 'CSE 209', '55-2', '303', 'A'
+
+
+    -- CSE 221 (56 Intake)
+    UNION ALL SELECT 'CSE 221', '56-1', '303', 'A'
+    UNION ALL SELECT 'CSE 221', '56-2', '401', 'B'
+
+
+    -- CSE 205 (56 Intake)
+    UNION ALL SELECT 'CSE 205', '56-1', '301', 'A'
+    UNION ALL SELECT 'CSE 205', '56-2', '302', 'A'
+
+
+    -- CSE 231 (56 Intake)
+    UNION ALL SELECT 'CSE 231', '56-1', '401', 'B'
+    UNION ALL SELECT 'CSE 231', '56-2', '402', 'B'
+
+
+) AS x
+
+
+JOIN courses c
+    ON c.course_code = x.course_code
+
+
+JOIN exams e
+    ON e.course_id = c.course_id
+
+
+JOIN exam_schedules es
+    ON es.exam_id = e.exam_id
+
+
+JOIN rooms r
+    ON r.room_number = x.room_number
+    AND r.building = x.building
+
+
+JOIN enrollments en
+    ON en.course_id = c.course_id
+    AND en.semester = e.semester
+
+
+JOIN students s
+    ON s.student_id = en.student_id
+    AND s.intake_section = x.intake_section
+
+
+GROUP BY
+    es.schedule_id,
+    r.room_id,
+    x.intake_section
+
+
+ORDER BY
+    es.schedule_id ASC,
+    x.intake_section ASC;
+________________
+-- Assign individual students to exam rooms
+
+
+CREATE TABLE exam_room_students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    allocation_id INT NOT NULL,
+    student_id INT NOT NULL,
+
+
+    UNIQUE (allocation_id, student_id),
+
+
+    FOREIGN KEY (allocation_id)
+        REFERENCES exam_room_allocations(allocation_id)
+        ON DELETE CASCADE,
+
+
+    FOREIGN KEY (student_id)
+        REFERENCES students(student_id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+-- Assign students according to room allocation seat limits
+
+
+INSERT INTO exam_room_students (allocation_id, student_id)
+
+
+SELECT
+    ar.allocation_id,
+    sr.student_id
+
+
+FROM (
+    SELECT
+        allocation_id,
+        schedule_id,
+        intake_section,
+        allocated_seats,
+
+
+        COALESCE(
+            SUM(allocated_seats) OVER (
+                PARTITION BY schedule_id, intake_section
+                ORDER BY allocation_id
+                ROWS BETWEEN UNBOUNDED PRECEDING AND 1 PRECEDING
+            ), 0
+        ) AS seat_start
+
+
+    FROM exam_room_allocations
+) ar
+
+
+JOIN (
+    SELECT
+        es.schedule_id,
+        s.student_id,
+        s.intake_section,
+
+
+        ROW_NUMBER() OVER (
+            PARTITION BY es.schedule_id, s.intake_section
+            ORDER BY s.student_id
+        ) AS student_rank
+
+
+    FROM exam_schedules es
+    JOIN exams e ON es.exam_id = e.exam_id
+    JOIN enrollments en ON en.course_id = e.course_id
+    JOIN students s
+        ON s.student_id = en.student_id
+        AND s.semester = en.semester
+    WHERE e.semester = en.semester
+) sr
+
+
+ON sr.schedule_id = ar.schedule_id
+AND sr.intake_section = ar.intake_section
+
+
+WHERE sr.student_rank > ar.seat_start
+AND sr.student_rank <= ar.seat_start + ar.allocated_seats;
+
+
+________________
+
+
+-- create invigilator assignments table 
+
+
+CREATE TABLE invigilator_assignments (
+    assignment_id INT AUTO_INCREMENT PRIMARY KEY,
+    allocation_id INT NOT NULL,
+    invigilator_code VARCHAR(10) NOT NULL,
+
+
+    UNIQUE (allocation_id, invigilator_code),
+
+
+    FOREIGN KEY (allocation_id)
+        REFERENCES exam_room_allocations(allocation_id)
+        ON DELETE CASCADE,
+
+
+    FOREIGN KEY (invigilator_code)
+        REFERENCES invigilators(invigilator_code)
+        ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+
+
+
+-- insert into invigilator assignments 
+
+
+INSERT INTO invigilator_assignments
+(allocation_id, invigilator_code)
+
+
+SELECT
+    era.allocation_id,
+    x.invigilator_code
+
+
+FROM (
+    -- CSE 207 (55 Intake)
+    SELECT 'CSE 207' AS course_code, '55-1' AS intake_section, 'MDSHA' AS invigilator_code
+    UNION ALL SELECT 'CSE 207', '55-1', 'IN'
+    UNION ALL SELECT 'CSE 207', '55-2', 'MANQ'
+    UNION ALL SELECT 'CSE 207', '55-2', 'HMF'
+
+
+    -- CSE 341 (55 Intake)
+    UNION ALL SELECT 'CSE 341', '55-1', 'MANQ'
+    UNION ALL SELECT 'CSE 341', '55-1', 'MHB'
+    UNION ALL SELECT 'CSE 341', '55-2', 'MDSHA'
+    UNION ALL SELECT 'CSE 341', '55-2', 'BJM'
+
+
+    -- CSE 209 (55 Intake)
+    UNION ALL SELECT 'CSE 209', '55-1', 'HMF'
+    UNION ALL SELECT 'CSE 209', '55-1', 'BJM'
+    UNION ALL SELECT 'CSE 209', '55-2', 'IN'
+    UNION ALL SELECT 'CSE 209', '55-2', 'MHB'
+
+
+    -- CSE 221 (56 Intake)
+    UNION ALL SELECT 'CSE 221', '56-1', 'IN'
+    UNION ALL SELECT 'CSE 221', '56-1', 'MANQ'
+    UNION ALL SELECT 'CSE 221', '56-2', 'HMF'
+    UNION ALL SELECT 'CSE 221', '56-2', 'MHB'
+
+
+    -- CSE 205 (56 Intake)
+    UNION ALL SELECT 'CSE 205', '56-1', 'MDSHA'
+    UNION ALL SELECT 'CSE 205', '56-1', 'BJM'
+    UNION ALL SELECT 'CSE 205', '56-2', 'IN'
+    UNION ALL SELECT 'CSE 205', '56-2', 'MANQ'
+
+
+    -- CSE 231 (56 Intake)
+    UNION ALL SELECT 'CSE 231', '56-1', 'HMF'
+    UNION ALL SELECT 'CSE 231', '56-1', 'MHB'
+    UNION ALL SELECT 'CSE 231', '56-2', 'MDSHA'
+    UNION ALL SELECT 'CSE 231', '56-2', 'BJM'
+
+
+) AS x
+
+
+JOIN courses c
+    ON c.course_code = x.course_code
+
+
+JOIN exams e
+    ON e.course_id = c.course_id
+
+
+JOIN exam_schedules es
+    ON es.exam_id = e.exam_id
+
+
+JOIN exam_room_allocations era
+    ON era.schedule_id = es.schedule_id
+    AND era.intake_section = x.intake_section
+
+
+JOIN invigilators i
+    ON i.invigilator_code = x.invigilator_code
+
+
+ORDER BY
+    es.schedule_id ASC,
+    era.allocation_id ASC,
+    x.invigilator_code ASC;
+
+
+
+
+-- check data 
+
+
+SELECT
+    ia.assignment_id,
+    c.course_code,
+    c.course_name,
+    es.exam_date,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    i.invigilator_code,
+    i.invigilator_name
+
+
+FROM invigilator_assignments ia
+
+
+JOIN exam_room_allocations era
+    ON era.allocation_id = ia.allocation_id
+
+
+JOIN exam_schedules es
+    ON es.schedule_id = era.schedule_id
+
+
+JOIN exams e
+    ON e.exam_id = es.exam_id
+
+
+JOIN courses c
+    ON c.course_id = e.course_id
+
+
+JOIN rooms r
+    ON r.room_id = era.room_id
+
+
+JOIN invigilators i
+    ON i.invigilator_code = ia.invigilator_code
+
+
+ORDER BY ia.assignment_id ASC;
+
+
+________________
+
+
+-- Create complete exam routine with student count
+
+
+CREATE VIEW complete_exam_routine AS
+SELECT
+    c.course_code,
+    c.course_name,
+    es.exam_date,
+    es.start_time,
+    es.end_time,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    era.allocated_seats,
+    COUNT(DISTINCT ers.student_id) AS total_students,
+    GROUP_CONCAT(
+        DISTINCT CONCAT(i.invigilator_code, ' - ', i.invigilator_name)
+        SEPARATOR ', '
+    ) AS invigilators
+
+
+FROM exam_room_allocations era
+JOIN exam_schedules es ON es.schedule_id = era.schedule_id
+JOIN exams e ON e.exam_id = es.exam_id
+JOIN courses c ON c.course_id = e.course_id
+JOIN rooms r ON r.room_id = era.room_id
+
+
+LEFT JOIN exam_room_students ers
+    ON ers.allocation_id = era.allocation_id
+
+
+LEFT JOIN invigilator_assignments ia
+    ON ia.allocation_id = era.allocation_id
+
+
+
+
+LEFT JOIN invigilators i
+    ON i.invigilator_code = ia.invigilator_code
+
+
+GROUP BY
+    era.allocation_id,
+    c.course_code,
+    c.course_name,
+    es.exam_date,
+    es.start_time,
+    es.end_time,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    era.allocated_seats;
+________________
+
+
+-- create student course report view 
+
+
+CREATE VIEW student_course_report AS 
+SELECT 
+s.student_id, 
+s.student_name, 
+s.email, 
+s.department, 
+s.intake_section, 
+s.semester, 
+c.course_code, 
+c.course_name 
+FROM enrollments e 
+JOIN students s ON e.student_id = s.student_id 
+JOIN courses c ON e.course_id = c.course_id;
+________________
+-- create room allocation report view 
+
+
+-- Create room allocation report with assigned student count
+
+
+CREATE VIEW room_allocation_report AS
+SELECT
+    c.course_code,
+    c.course_name,
+    es.exam_date,
+    es.start_time,
+    es.end_time,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    r.capacity,
+    era.allocated_seats,
+    COUNT(DISTINCT ers.student_id) AS total_students
+
+
+FROM exam_room_allocations era
+JOIN exam_schedules es ON es.schedule_id = era.schedule_id
+JOIN exams e ON es.exam_id = e.exam_id
+JOIN courses c ON e.course_id = c.course_id
+JOIN rooms r ON era.room_id = r.room_id
+
+
+LEFT JOIN exam_room_students ers
+    ON ers.allocation_id = era.allocation_id
+
+
+GROUP BY
+    era.allocation_id,
+    c.course_code,
+    c.course_name,
+    es.exam_date,
+    es.start_time,
+    es.end_time,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    r.capacity,
+    era.allocated_seats;
+
+
+
+
+
+
+
+
+-- check all views 
+
+
+SELECT * 
+FROM complete_exam_routine;
+
+
+SELECT * 
+FROM student_course_report;
+
+
+SELECT * 
+FROM room_allocation_report;
+________________
+-- student conflict detection 
+
+
+SELECT 
+s.student_id, 
+s.student_name, 
+s.intake_section, 
+c1.course_code AS course_1, 
+c2.course_code AS course_2, 
+es1.exam_date, 
+es1.schedule_id AS schedule_1, 
+es1.start_time AS start_1, 
+es1.end_time AS end_1, 
+es2.schedule_id AS schedule_2, 
+es2.start_time AS start_2, 
+es2.end_time AS end_2 
+FROM enrollments en1 
+JOIN enrollments en2 ON en1.student_id = en2.student_id 
+AND en1.course_id < en2.course_id 
+AND en1.semester = en2.semester 
+JOIN students s ON en1.student_id = s.student_id 
+JOIN exams e1 ON en1.course_id = e1.course_id 
+JOIN exams e2 ON en2.course_id = e2.course_id 
+JOIN exam_schedules es1 ON e1.exam_id = es1.exam_id 
+JOIN exam_schedules es2 ON e2.exam_id = es2.exam_id 
+JOIN courses c1 ON e1.course_id = c1.course_id 
+JOIN courses c2 ON e2.course_id = c2.course_id 
+WHERE 
+es1.schedule_id <> es2.schedule_id
+AND es1.exam_date = es2.exam_date
+        AND e1.academic_year = e2.academic_year
+AND e1.semester = e2.semester
+AND es1.start_time < es2.end_time
+AND es1.end_time > es2.start_time;
+________________
+-- room conflict detection 
+
+
+-- Check room capacity and assigned student count
+
+
+SELECT
+    c.course_code,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    r.capacity,
+    era.allocated_seats,
+    COUNT(ers.student_id) AS assigned_students
+
+
+FROM exam_room_allocations era
+JOIN exam_schedules es ON es.schedule_id = era.schedule_id
+JOIN exams e ON es.exam_id = e.exam_id
+JOIN courses c ON e.course_id = c.course_id
+JOIN rooms r ON era.room_id = r.room_id
+
+
+LEFT JOIN exam_room_students ers
+    ON ers.allocation_id = era.allocation_id
+
+
+GROUP BY
+    era.allocation_id,
+    c.course_code,
+    era.intake_section,
+    r.building,
+    r.room_number,
+    r.capacity,
+    era.allocated_seats
+
+
+HAVING assigned_students > r.capacity
+    OR assigned_students > era.allocated_seats
+    OR assigned_students < era.allocated_seats;
+________________
+
+
+-- Check if a student is assigned to multiple rooms for the same exam
+
+
+SELECT
+    es.schedule_id,
+    c.course_code,
+    s.student_id,
+    s.student_name,
+    COUNT(DISTINCT era.room_id) AS assigned_rooms
+
+
+FROM exam_room_students ers
+JOIN exam_room_allocations era ON ers.allocation_id = era.allocation_id
+JOIN exam_schedules es ON era.schedule_id = es.schedule_id
+JOIN exams e ON es.exam_id = e.exam_id
+JOIN courses c ON e.course_id = c.course_id
+JOIN students s ON ers.student_id = s.student_id
+
+
+GROUP BY
+    es.schedule_id,
+    c.course_code,
+    s.student_id,
+    s.student_name
+
+
+HAVING COUNT(DISTINCT era.room_id) > 1;
+________________
+
+
+-- invigilator conflict detection 
+
+
+-- Invigilator conflict detection
+
+
+SELECT
+    ia1.invigilator_code,
+    i.invigilator_name,
+    es1.exam_date,
+    es1.schedule_id AS schedule_one,
+    es1.start_time AS start_1,
+    es1.end_time AS end_1,
+    es2.schedule_id AS schedule_two,
+    es2.start_time AS start_2,
+    es2.end_time AS end_2
+
+
+FROM invigilator_assignments ia1
+
+
+JOIN invigilator_assignments ia2
+    ON ia1.invigilator_code = ia2.invigilator_code
+    AND ia1.assignment_id < ia2.assignment_id
+
+
+JOIN exam_room_allocations era1
+    ON era1.allocation_id = ia1.allocation_id
+
+
+JOIN exam_room_allocations era2
+    ON era2.allocation_id = ia2.allocation_id
+
+
+JOIN exam_schedules es1
+    ON es1.schedule_id = era1.schedule_id
+
+
+JOIN exam_schedules es2
+    ON es2.schedule_id = era2.schedule_id
+
+
+JOIN invigilators i
+    ON i.invigilator_code = ia1.invigilator_code
+
+
+WHERE
+    es1.exam_date = es2.exam_date
+    AND es1.start_time < es2.end_time
+    AND es1.end_time > es2.start_time;
+________________
+
+
+-- student insert trigger
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_student_exam_conflict_insert
+BEFORE INSERT ON exam_schedules
+
+
+FOR EACH ROW
+BEGIN
+IF NEW.start_time >= NEW.end_time THEN
+
+
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Invalid exam time!';
+
+
+END IF;
+
+
+    IF EXISTS (
+        SELECT 1
+        FROM enrollments en1
+
+
+        JOIN enrollments en2
+            ON en1.student_id = en2.student_id
+
+
+        JOIN exams e1
+            ON en1.course_id = e1.course_id
+
+
+        JOIN exams e2
+            ON en2.course_id = e2.course_id
+
+
+        JOIN exam_schedules es
+            ON es.exam_id = e2.exam_id
+
+
+        WHERE e1.exam_id = NEW.exam_id
+          AND e1.exam_id <> e2.exam_id
+
+
+          AND e1.academic_year = e2.academic_year
+          AND e1.semester = e2.semester
+AND en1.semester = e1.semester
+AND en2.semester = e2.semester
+
+
+
+
+          AND en1.semester = en2.semester
+
+
+          AND es.exam_date = NEW.exam_date
+
+
+          AND NEW.start_time < es.end_time
+          AND NEW.end_time > es.start_time
+
+
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Student has another exam! Schedule cannot be inserted.';
+
+
+    END IF;
+
+
+END$$
+
+
+DELIMITER ;
+________________
+
+
+-- student update trigger 
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_student_exam_conflict_update
+BEFORE UPDATE ON exam_schedules
+
+
+FOR EACH ROW
+BEGIN
+IF NEW.start_time >= NEW.end_time THEN
+
+
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'Invalid exam time!';
+
+
+END IF;
+
+
+    IF EXISTS (
+        SELECT 1
+        FROM enrollments en1
+
+
+        JOIN enrollments en2
+            ON en1.student_id = en2.student_id
+
+
+        JOIN exams e1
+            ON en1.course_id = e1.course_id
+
+
+        JOIN exams e2
+            ON en2.course_id = e2.course_id
+
+
+        JOIN exam_schedules es
+            ON es.exam_id = e2.exam_id
+
+
+        WHERE e1.exam_id = NEW.exam_id
+          AND e1.exam_id <> e2.exam_id
+
+
+          AND es.schedule_id <> OLD.schedule_id
+AND en1.semester = e1.semester
+AND en2.semester = e2.semester
+
+
+
+
+          AND e1.academic_year = e2.academic_year
+          AND e1.semester = e2.semester
+
+
+          AND en1.semester = en2.semester
+
+
+          AND es.exam_date = NEW.exam_date
+
+
+          AND NEW.start_time < es.end_time
+          AND NEW.end_time > es.start_time
+
+
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Student has another exam! Schedule cannot be updated.';
+
+
+    END IF;
+
+
+END$$
+
+
+DELIMITER ;
+________________
+
+
+-- room insert trigger
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_room_insert
+BEFORE INSERT ON exam_room_allocations
+FOR EACH ROW
+BEGIN
+
+
+    DECLARE room_capacity INT;
+    DECLARE existing_seats INT;
+
+
+    SELECT capacity
+    INTO room_capacity
+    FROM rooms
+    WHERE room_id = NEW.room_id;
+
+
+    SELECT COALESCE(SUM(allocated_seats), 0)
+    INTO existing_seats
+    FROM exam_room_allocations
+    WHERE room_id = NEW.room_id
+      AND schedule_id = NEW.schedule_id;
+
+
+    -- Check room capacity
+    IF NEW.allocated_seats <= 0
+       OR existing_seats + NEW.allocated_seats > room_capacity THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Room capacity exceeded! Allocation cannot be inserted.';
+
+
+    END IF;
+
+
+    -- Check room time conflict
+    IF EXISTS (
+        SELECT 1
+        FROM exam_room_allocations a
+
+
+        JOIN exam_schedules es
+            ON a.schedule_id = es.schedule_id
+
+
+        JOIN exam_schedules new_es
+            ON new_es.schedule_id = NEW.schedule_id
+
+
+        WHERE a.room_id = NEW.room_id
+          AND es.schedule_id <> NEW.schedule_id
+
+
+          AND es.exam_date = new_es.exam_date
+
+
+          AND new_es.start_time < es.end_time
+          AND new_es.end_time > es.start_time
+
+
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Room is already booked! Allocation cannot be inserted.';
+
+
+    END IF;
+
+
+END$$
+
+
+DELIMITER ;
+________________
+
+
+-- room update trigger
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_room_update
+BEFORE UPDATE ON exam_room_allocations
+FOR EACH ROW
+BEGIN
+
+
+    DECLARE room_capacity INT;
+    DECLARE existing_seats INT;
+    DECLARE assigned_students INT;
+
+
+    SELECT capacity
+    INTO room_capacity
+    FROM rooms
+    WHERE room_id = NEW.room_id;
+
+
+    SELECT COALESCE(SUM(allocated_seats), 0)
+    INTO existing_seats
+    FROM exam_room_allocations
+    WHERE room_id = NEW.room_id
+      AND schedule_id = NEW.schedule_id
+      AND allocation_id <> OLD.allocation_id;
+
+
+    -- Check already assigned students
+    SELECT COUNT(*)
+    INTO assigned_students
+    FROM exam_room_students
+    WHERE allocation_id = OLD.allocation_id;
+
+
+    -- Prevent seats from becoming less than assigned students
+    IF NEW.allocated_seats < assigned_students THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Allocated seats cannot be less than assigned students!';
+
+
+    END IF;
+
+
+    -- Check room capacity
+    IF NEW.allocated_seats <= 0
+       OR existing_seats + NEW.allocated_seats > room_capacity THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Room capacity exceeded! Allocation cannot be updated.';
+
+
+    END IF;
+
+
+    -- Check room time conflict
+    IF EXISTS (
+        SELECT 1
+        FROM exam_room_allocations a
+
+
+        JOIN exam_schedules es
+            ON a.schedule_id = es.schedule_id
+
+
+        JOIN exam_schedules new_es
+            ON new_es.schedule_id = NEW.schedule_id
+
+
+        WHERE a.room_id = NEW.room_id
+          AND a.allocation_id <> OLD.allocation_id
+          AND a.schedule_id <> NEW.schedule_id
+          AND es.exam_date = new_es.exam_date
+          AND new_es.start_time < es.end_time
+          AND new_es.end_time > es.start_time
+
+
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Room is already booked! Allocation cannot be updated.';
+
+
+    END IF;
+
+
+END$$
+
+
+DELIMITER ;
+
+
+________________
+
+
+-- invigilator insert trigger 
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_invigilator_insert
+BEFORE INSERT ON invigilator_assignments
+FOR EACH ROW
+BEGIN
+
+
+    IF EXISTS (
+        SELECT 1
+        FROM invigilator_assignments ia
+        JOIN exam_room_allocations era
+            ON era.allocation_id = ia.allocation_id
+        JOIN exam_schedules es
+            ON es.schedule_id = era.schedule_id
+
+
+        JOIN exam_room_allocations new_era
+            ON new_era.allocation_id = NEW.allocation_id
+        JOIN exam_schedules new_es
+            ON new_es.schedule_id = new_era.schedule_id
+
+
+        WHERE ia.invigilator_code = NEW.invigilator_code
+          AND es.exam_date = new_es.exam_date
+          AND new_es.start_time < es.end_time
+          AND new_es.end_time > es.start_time
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Invigilator has another exam duty! Assignment cannot be inserted.';
+
+
+    END IF;
+
+
+END$$
+
+
+
+
+
+
+________________
+
+
+-- invigilator update trigger
+
+
+CREATE TRIGGER validate_invigilator_update
+BEFORE UPDATE ON invigilator_assignments
+FOR EACH ROW
+BEGIN
+
+
+    IF EXISTS (
+        SELECT 1
+        FROM invigilator_assignments ia
+        JOIN exam_room_allocations era
+            ON era.allocation_id = ia.allocation_id
+        JOIN exam_schedules es
+            ON es.schedule_id = era.schedule_id
+
+
+        JOIN exam_room_allocations new_era
+            ON new_era.allocation_id = NEW.allocation_id
+        JOIN exam_schedules new_es
+            ON new_es.schedule_id = new_era.schedule_id
+
+
+        WHERE ia.invigilator_code = NEW.invigilator_code
+          AND ia.assignment_id <> OLD.assignment_id
+          AND es.exam_date = new_es.exam_date
+          AND new_es.start_time < es.end_time
+          AND new_es.end_time > es.start_time
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Invigilator has another exam duty! Assignment cannot be updated.';
+
+
+    END IF;
+
+
+END$$
+
+
+DELIMITER ;
+
+
+________________
+
+
+-- Room Conflict During Schedule Update
+
+
+-- Prevent room conflict during schedule update
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_room_conflict_on_schedule_update
+BEFORE UPDATE ON exam_schedules
+FOR EACH ROW
+BEGIN
+    IF NEW.start_time >= NEW.end_time THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Invalid exam time!';
+    END IF;
+
+
+    IF EXISTS (
+        SELECT 1
+        FROM exam_room_allocations a2
+        JOIN exam_schedules es
+            ON a2.schedule_id = es.schedule_id
+        WHERE a2.schedule_id <> OLD.schedule_id
+          AND a2.room_id IN (
+              SELECT a1.room_id
+              FROM exam_room_allocations a1
+              WHERE a1.schedule_id = OLD.schedule_id
+          )
+          AND es.exam_date = NEW.exam_date
+          AND NEW.start_time < es.end_time
+          AND NEW.end_time > es.start_time
+    ) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Room conflict! Schedule cannot be updated.';
+    END IF;
+END$$
+
+
+DELIMITER ;
+
+
+
+
+
+
+________________
+
+
+-- Invigilator Conflict During Schedule Update
+
+
+
+
+DELIMITER $$
+
+
+CREATE TRIGGER validate_invigilator_conflict_on_schedule_update
+BEFORE UPDATE ON exam_schedules
+FOR EACH ROW
+BEGIN
+
+
+    IF NEW.start_time >= NEW.end_time THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Invalid exam time!';
+
+
+    END IF;
+
+
+    IF EXISTS (
+        SELECT 1
+        FROM invigilator_assignments ia2
+
+
+        JOIN exam_room_allocations era2
+            ON era2.allocation_id = ia2.allocation_id
+
+
+        JOIN exam_schedules es
+            ON es.schedule_id = era2.schedule_id
+
+
+        WHERE era2.schedule_id <> OLD.schedule_id
+
+
+          AND ia2.invigilator_code IN (
+              SELECT ia1.invigilator_code
+              FROM invigilator_assignments ia1
+
+
+              JOIN exam_room_allocations era1
+                  ON era1.allocation_id = ia1.allocation_id
+
+
+              WHERE era1.schedule_id = OLD.schedule_id
+          )
+
+
+          AND es.exam_date = NEW.exam_date
+          AND NEW.start_time < es.end_time
+          AND NEW.end_time > es.start_time
+
+
+    ) THEN
+
+
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT =
+        'Invigilator conflict! Schedule cannot be updated.';
+
+
+    END IF;
+
+
+END$$
+
+
+DELIMITER ;
